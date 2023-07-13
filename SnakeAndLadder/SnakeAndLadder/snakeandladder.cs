@@ -42,6 +42,7 @@ namespace SnakeAndLadder
                         break;
                 }
             }
+            Console.WriteLine("Player is the Winner");
         }
     }
 }
