@@ -1,20 +1,21 @@
 ﻿using System;
-
 namespace SnakeAndLadder
 {
-    class snakeandladder
+    public class snakeandladder
     {
         const int NO_PLAY = 0, LADDER = 1, SNAKE = 2, WINNING_POSITION = 100, STARTING_POSITION = 0;
-        int position = 0;
+        int position = 0, count = 0;
         Random random = new Random();
         public int DieRoll()
         {
             int diePosition = random.Next(1, 7);
-            Console.WriteLine("Player Position is " + " " + this.position);
+            Console.WriteLine("Player Position" + " " + this.position);
+            count++;
             return diePosition;
         }
         public void Game()
         {
+
             while (this.position < WINNING_POSITION)
             {
                 int option = random.Next(0, 3);
@@ -23,7 +24,8 @@ namespace SnakeAndLadder
                     case NO_PLAY:
                         break;
                     case LADDER:
-                       int dieRoll = DieRoll();
+                        int dieRoll = DieRoll();
+                        dieRoll = DieRoll();
                         if (this.position + dieRoll <= WINNING_POSITION)
                         {
                             this.position += dieRoll;
@@ -40,9 +42,11 @@ namespace SnakeAndLadder
                             this.position -= dieRoll;
                         }
                         break;
+
                 }
             }
-            Console.WriteLine("Player is the Winner");
+            Console.WriteLine("Number of Time the Dice's played by Player " + "=" + count);
+
         }
     }
 }
