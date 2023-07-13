@@ -13,7 +13,7 @@ namespace SnakeAndLadder
             count++;
             return diePosition;
         }
-        public void Game()
+        public int Game()
         {
 
             while (this.position < WINNING_POSITION)
@@ -45,7 +45,7 @@ namespace SnakeAndLadder
 
                 }
             }
-            Console.WriteLine("Number of Time the Dice's played by Player " + "=" + count);
+            return count;
 
         }
     }
