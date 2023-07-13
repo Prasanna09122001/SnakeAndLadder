@@ -4,10 +4,13 @@ namespace SnakeAndLadder
 {
     class snakeandladder
     {
-        public void DieRoll()
+        int position = 0;
+        Random random = new Random();
+        public int DieRoll()
         {
-            int position = 0;
-            Console.WriteLine("Player Position is " + position);
+            int diePosition = random.Next(1, 7);
+            Console.WriteLine("Player Position" + " " + this.position);
+            return diePosition;
         }
     }
 }
