@@ -1,2 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System;
+
+namespace SnakeAndLadder
+{
+    class program
+    {
+        public void Main()
+        {
+            Console.WriteLine("Welcome to the Snake And Ladder Program");
+        }
+    }
+}
