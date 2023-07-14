@@ -46,7 +46,6 @@ namespace SnakeAndLadder
                 }
             }
             return count;
-
-        }
+         }
     }
 }
